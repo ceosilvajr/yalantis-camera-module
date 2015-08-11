@@ -30,18 +30,23 @@ import android.os.Environment;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.widget.Toast;
+
 import com.yalantis.cameramodule.CameraConst;
-import com.yalantis.cameramodule.R;
 import com.yalantis.cameramodule.fragment.CameraFragment;
-import com.yalantis.cameramodule.interfaces.*;
+import com.yalantis.cameramodule.interfaces.CameraParamsChangedListener;
+import com.yalantis.cameramodule.interfaces.KeyEventsListener;
+import com.yalantis.cameramodule.interfaces.PhotoSavedListener;
+import com.yalantis.cameramodule.interfaces.PhotoTakenCallback;
+import com.yalantis.cameramodule.interfaces.RawPhotoTakenCallback;
 import com.yalantis.cameramodule.manager.SharedPrefManager;
 import com.yalantis.cameramodule.util.PhotoUtil;
 import com.yalantis.cameramodule.util.SavingPhotoTask;
-import timber.log.Timber;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import timber.log.Timber;
 
 public class CameraActivity extends BaseActivity implements PhotoTakenCallback, PhotoSavedListener, RawPhotoTakenCallback,
         CameraParamsChangedListener {

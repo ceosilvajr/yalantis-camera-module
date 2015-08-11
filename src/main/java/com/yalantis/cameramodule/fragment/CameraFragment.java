@@ -93,7 +93,7 @@ public class CameraFragment extends com.yalantis.cameramodule.fragment.BaseFragm
     private View mCapture;
     private ProgressBar progressBar;
     private ImageButton flashModeButton;
-    private TextView mZoomRatioTextView;
+    //private TextView mZoomRatioTextView;
     private HDRMode hdrMode;
     private boolean supportedHDR = false;
     private boolean supportedFlash = false;
@@ -219,21 +219,21 @@ public class CameraFragment extends com.yalantis.cameramodule.fragment.BaseFragm
 
         setPreviewContainerSize(mScreenWidth, mScreenHeight, ratio);
 
-        mZoomRatioTextView = (TextView) view.findViewById(R.id.zoom_ratio);
-        if (mZoomRatioTextView != null) {
-            setZoomRatioText(zoomIndex);
-        }
+//        mZoomRatioTextView = (TextView) view.findViewById(R.id.zoom_ratio);
+//        if (mZoomRatioTextView != null) {
+//            setZoomRatioText(zoomIndex);
+//        }
 
-        View cameraSettings = view.findViewById(R.id.camera_settings);
-        if (cameraSettings != null) {
-            view.findViewById(R.id.camera_settings).setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    com.yalantis.cameramodule.fragment.CameraSettingsDialogFragment.newInstance(packSettings(), CameraFragment.this).show(getFragmentManager());
-                }
-            });
-        }
+//        View cameraSettings = view.findViewById(R.id.camera_settings);
+//        if (cameraSettings != null) {
+//            view.findViewById(R.id.camera_settings).setOnClickListener(new View.OnClickListener() {
+//
+//                @Override
+//                public void onClick(View v) {
+//                    com.yalantis.cameramodule.fragment.CameraSettingsDialogFragment.newInstance(packSettings(), CameraFragment.this).show(getFragmentManager());
+//                }
+//            });
+//        }
 
         View controls = view.findViewById(R.id.controls_layout);
         if (controls != null) {
@@ -516,15 +516,15 @@ public class CameraFragment extends com.yalantis.cameramodule.fragment.BaseFragm
     private void setZoom(int index) {
         parameters.setZoom(index);
         camera.setParameters(parameters);
-        setZoomRatioText(index);
+        //setZoomRatioText(index);
     }
 
-    private void setZoomRatioText(int index) {
-        if (mZoomRatioTextView != null) {
-            float value = zoomRatios.get(index) / 100.0f;
-            mZoomRatioTextView.setText(getString(R.string.lbl_zoom_ratio_value, value));
-        }
-    }
+//    private void setZoomRatioText(int index) {
+//        if (mZoomRatioTextView != null) {
+//            float value = zoomRatios.get(index) / 100.0f;
+//            mZoomRatioTextView.setText(getString(R.string.lbl_zoom_ratio_value, value));
+//        }
+//    }
 
     private void switchFlashMode() {
         switch (flashMode) {

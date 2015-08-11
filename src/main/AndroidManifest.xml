@@ -22,32 +22,36 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.yalantis.cameramodule">
+    package="com.yalantis.cameramodule">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-    <uses-feature android:name="android.hardware.camera" android:required="true"/>
-    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application>
 
         <activity
-             android:name="com.yalantis.cameramodule.activity.CameraActivity"
-             android:theme="@style/Theme.TranslucentNavigationBar"
-             android:configChanges="orientation|screenSize|keyboardHidden"
-             android:screenOrientation="portrait"/>
+            android:name="com.yalantis.cameramodule.activity.CameraActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme" />
 
         <activity
-             android:name="com.yalantis.cameramodule.activity.PhotoCropActivity"
-             android:label="@string/lbl_photo_crop"
-             android:screenOrientation="portrait"/>
+            android:name="com.yalantis.cameramodule.activity.PhotoCropActivity"
+            android:label="@string/lbl_photo_crop"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme" />
 
         <activity
-             android:name="com.yalantis.cameramodule.activity.PhotoPreviewActivity"
-             android:label="@string/lbl_photo_preview"
-             android:screenOrientation="portrait"/>
+            android:name="com.yalantis.cameramodule.activity.PhotoPreviewActivity"
+            android:label="@string/lbl_photo_preview"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme" />
 
     </application>
 

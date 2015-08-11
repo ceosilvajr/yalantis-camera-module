@@ -35,18 +35,6 @@
         <item name="android:background">@color/black_overlay</item>
     </style>
 
-    <style name="Theme.TranslucentNavigationBar" parent="android:Theme.Holo.Light.NoActionBar.TranslucentDecor">
-        <item name="android:windowTranslucentStatus">false</item>
-        <item name="android:windowFullscreen">false</item>
-    </style>
-
-    <style name="Theme.TransparentActionBar" parent="android:Theme.Holo.NoActionBar.TranslucentDecor">
-        <item name="android:actionBarStyle">@style/Widget.ActionBar.Transparent</item>
-        <item name="android:windowTranslucentStatus">false</item>
-        <item name="android:windowActionBar">true</item>
-        <item name="android:windowNoTitle">false</item>
-    </style>
-
     <style name="Widget.ActionBar.Transparent" parent="@android:style/Widget.Holo.ActionBar">
         <item name="android:background">#55000000</item>
     </style>

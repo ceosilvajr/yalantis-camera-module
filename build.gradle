@@ -5,12 +5,12 @@ repositories {
 }
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion '19.1.0'
+    compileSdkVersion 22
+    buildToolsVersion '22.0.1'
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 19
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
     }
@@ -31,6 +31,7 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
+    compile 'com.android.support:appcompat-v7:22.2.1'
     compile 'com.edmodo:cropper:1.0.1'
     compile 'com.squareup.picasso:picasso:2.2.0'
     compile 'com.jakewharton.timber:timber:2.2.2'
